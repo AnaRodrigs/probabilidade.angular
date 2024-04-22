@@ -1,1 +1,21 @@
-<p>probabilidade works!</p>
+<div>
+    <h1>Calculadora de Probabilidade</h1>
+    
+    <label for="sucessos">Número de sucessos:</label>
+    <input type="number" id="sucessos" [(ngModel)]="sucessos">
+    
+    <label for="tentativas">Número de tentativas:</label>
+    <input type="number" id="tentativas" [(ngModel)]="tentativas">
+    
+    <button (click)="calcularProbabilidade()">Calcular Probabilidade</button>
+    
+    <p *ngIf="probabilidade !== null">Probabilidade: {{ probabilidade | number:'1.2-2' }}</p>
+  
+    <h2>Consultas Anteriores</h2>
+    <ul>
+      <li *ngFor="let consulta of consultasAnteriores">
+        Sucessos: {{ consulta.sucessos }}, Tentativas: {{ consulta.tentativas }}, Probabilidade: {{ consulta.probabilidade | number:'1.2-2' }}
+      </li>
+    </ul>
+  </div>
+  
