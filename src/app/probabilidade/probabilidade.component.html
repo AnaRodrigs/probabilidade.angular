@@ -12,10 +12,11 @@
     <p *ngIf="probabilidade !== null">Probabilidade: {{ probabilidade | number:'1.2-2' }}</p>
   
     <h2>Consultas Anteriores</h2>
-    <ul>
-      <li *ngFor="let consulta of consultasAnteriores">
-        Sucessos: {{ consulta.sucessos }}, Tentativas: {{ consulta.tentativas }}, Probabilidade: {{ consulta.probabilidade | number:'1.2-2' }}
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li *ngFor="let consulta of consultasAnteriores">
+      Sucessos: {{ consulta.sucessos }}, Tentativas: {{ consulta.tentativas }}, Probabilidade: {{ consulta.probabilidade | number:'1.2-2' }}
+      <button (click)="deletarConsulta(consulta.id)">Deletar</button>
+    </li>
+  </ul>
+</div>
   
