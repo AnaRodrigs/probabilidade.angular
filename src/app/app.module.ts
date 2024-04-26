@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { ProbabilidadeComponent } from './probabilidade/probabilidade.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CondicionalComponent } from './condicional/condicional.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProbabilidadeComponent
+    ProbabilidadeComponent,
+    CondicionalComponent
   ],
   imports: [
   BrowserModule,
