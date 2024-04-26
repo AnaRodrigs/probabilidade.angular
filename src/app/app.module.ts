@@ -7,6 +7,8 @@ import { ProbabilidadeComponent } from './probabilidade/probabilidade.component'
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CondicionalComponent } from './condicional/condicional.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -18,8 +20,11 @@ import { CondicionalComponent } from './condicional/condicional.component';
   BrowserModule,
   FormsModule,
   NgbModule,
-  HttpClientModule  ],
-
+  HttpClientModule, 
+  RouterModule,
+  AppRoutingModule],  
+  
+  
   providers: [],
   bootstrap: [AppComponent]
 })
